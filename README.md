@@ -8,4 +8,13 @@ Copy the `last_index.rb` file into your `_plugins` folder and you're all set.
 It will copy the rendered version of the latest entry in any collection to
 `<collection_name>/index.html`, as well as the latest post to `/index.html`.
 
-**Warning**: This plugin overwrites your rendered `index.html` file.
+### Don't want to generate an index for some collections?
+
+Just add a `disable_index: true` key to your `_config.yml` file.
+
+```
+collections:
+  foobar:
+    output: true
+    disable_index: true
+```
