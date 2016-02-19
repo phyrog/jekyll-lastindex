@@ -4,7 +4,7 @@ Jekyll::Hooks.register :site, :post_write do |site|
     unless collections_config[name]["disable_index"]
       path = (name != "posts" ? "_site/#{name}/index.html" : "_site/index.html")
       File.open(path, "w") do |f|
-        f.write collection.last.to_s
+        f.write collection.docs.last.to_s
       end
     end
   end
